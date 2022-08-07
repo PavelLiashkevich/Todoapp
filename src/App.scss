@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	outline: none;
+	font-family: 'Dosis', -apple-system, system-ui, sans-serif;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.todo {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+
+	&__category-tasks {
+		width: 30%;
+		background: rgb(218, 215, 215);
+		font-size: 40px;
+
+		padding: 40px 20px;
+	}
+
+	&__list-left {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+
+		ul {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__edit-tasks {
+		width: 70%;
+		background: rgb(247, 211, 247);
+		font-size: 40px;
+		padding: 30px 20px;
+	}
+
+	&__list {
+		height: 30px;
+		width: 34px;
+		padding-right: 35px;
+	}
+}
+
+.active {
+	background: white;
+	border-radius: 20px;
+	cursor: pointer;
+	padding: 12px 60px;
+}
+
+.field {
+	background: #fff;
+	border: 1px solid #efefef;
+	box-sizing: border-box;
+	border-radius: 30px;
+	padding: 15px 30px;
+	text-align: center;
+
+	&:focus {
+		border: 2px solid #f7d3f7;
+	}
+
+	&::placeholder {
+		font-size: 18px;
+	}
+}

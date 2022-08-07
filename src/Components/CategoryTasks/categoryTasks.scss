@@ -1,0 +1,39 @@
+.items {
+	overflow: hidden;
+}
+
+.item {
+	$self: &;
+	margin-bottom: 18px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	&:hover {
+		background: white;
+		border-radius: 20px;
+		cursor: pointer;
+		padding: 12px 60px;
+		transition: 0.8s;
+	}
+	&:not(:hover) {
+		transition: 0.8s;
+	}
+	&:hover #{$self}__delete {
+		opacity: 0.4;
+		transition: 0.8s;
+	}
+
+	#{$self}__delete {
+		opacity: 0;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.item__delete {
+	height: 18px;
+	width: 18px;
+	margin-left: 30px;
+	margin-bottom: 2px;
+}
