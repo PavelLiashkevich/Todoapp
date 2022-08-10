@@ -9,7 +9,7 @@ The repository includes a project using HTML, CSS, JavaScript, React.
 
 ## Check it out 💻
 
-[Thesis Project by Pavel Liashkevich]('')
+[Todo App by Pavel Liashkevich](https://e17e7d7f.todo-app-a6o.pages.dev/)
 
 <div align="center">
 <sub>Todo App. Coded by 
