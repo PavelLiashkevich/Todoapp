@@ -1,14 +1,16 @@
 import React from 'react';
+
 import './categoryTasks.scss';
-import closePng from '../../Assets/icons/close.png';
+
 import axios from 'axios';
 
-// Компонент отрисовывающий название каждой категории
+import closePng from '../../Assets/icons/close.png';
 
-const CategoryTasks = ({ items, deleteCategory, onRemove }) => {
+const CategoryTasks = ({ items, onRemove, onClickItem, activeItem }) => {
+	// При нажатии на крестик, удаление выбранной категории
 	const removeCategory = item => {
 		if (window.confirm('Are you sure?')) {
-			axios.delete('http://localhost:3001/lists/' + item.id).then(() => {
+			axios.delete('http://localhost:3002/lists/' + item.id).then(() => {
 				onRemove(item.id);
 			});
 		}
@@ -18,8 +20,15 @@ const CategoryTasks = ({ items, deleteCategory, onRemove }) => {
 		<div className='items'>
 			<ul>
 				{items.map((item, index) => (
-					<li key={index} className={`item ${item.active ? 'active' : ''}`}>
-						<span>{item.name}</span>
+					<li
+						key={index}
+						className={`item ${activeItem === item ? 'active' : ''}`}
+						onClick={onClickItem ? () => onClickItem(item) : null}
+					>
+						<span>
+							{item.name}
+							{item.tasks && item.tasks.length > 0 && ` (${item.tasks.length})`}
+						</span>
 						<img
 							src={closePng}
 							alt='Delete Category'

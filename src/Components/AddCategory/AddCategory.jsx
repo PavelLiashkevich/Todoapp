@@ -10,19 +10,23 @@ function AddCategory({ addToList }) {
 	// Состояние, отвечающее за видимость окна для добавления новой категории
 	const [visiblePopup, setVisiblePopup] = useState(false);
 
-	// Состояние, отвечающее за видимость вводимых данных в input
+	// Состояние, отвечающее за данные вводимые в "input"
 	const [inputValue, setInputValue] = useState('');
 
 	// Функция для добавления новой категории в конец списка(после добавления, popup скрывается и очищается input)
 	const addNewCategory = () => {
 		if (!inputValue) {
 			alert('No data entered');
+			return;
 		}
 
 		axios
-			.post('http://localhost:3001/lists', { name: inputValue })
+			.post('http://localhost:3002/lists', { name: inputValue })
 			.then(({ data }) => {
-				const objList = { ...data };
+				if (!inputValue) {
+					return data;
+				}
+				const objList = { ...data, tasks: [] };
 				addToList(objList);
 				onClose();
 			});
