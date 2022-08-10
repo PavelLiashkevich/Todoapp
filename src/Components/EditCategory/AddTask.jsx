@@ -26,7 +26,7 @@ function AddTask({ list, onAddTask }) {
 		};
 
 		// Отправка запроса в задания, если успешно, получаем данные, а далее срабатывает метод "onAddTask" и наш список с заданиями обновляется
-		axios.post('http://localhost:3002/tasks', obj).then(({ data }) => {
+		axios.post('http://localhost:3000/tasks', obj).then(({ data }) => {
 			if (!inputValue) {
 				alert("You haven't entered the task text");
 				return;

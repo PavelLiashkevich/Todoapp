@@ -21,7 +21,7 @@ function App() {
 
 	useEffect(() => {
 		// Получение данных из фейковой БД, а именно категории заданий и сами задания, относящиеся к каждой категории
-		axios.get('http://localhost:3002/lists?_embed=tasks').then(({ data }) => {
+		axios.get('http://localhost:3000/lists?_embed=tasks').then(({ data }) => {
 			setLists(data);
 		});
 	}, []);
@@ -55,7 +55,7 @@ function App() {
 			setLists(newList);
 
 			// Удаление задания из БД
-			axios.delete('http://localhost:3002/tasks/' + taskId).catch(() => {
+			axios.delete('http://localhost:3000/tasks/' + taskId).catch(() => {
 				alert('Error');
 			});
 		}
@@ -96,7 +96,7 @@ function App() {
 
 		// Обновление в БД
 		axios
-			.patch('http://localhost:3002/tasks/' + taskObj.id, {
+			.patch('http://localhost:3000/tasks/' + taskObj.id, {
 				text: newTaskText,
 			})
 			.catch(() => {
@@ -121,7 +121,7 @@ function App() {
 
 		// Обновление в БД
 		axios
-			.patch('http://localhost:3002/tasks/' + taskId, {
+			.patch('http://localhost:3000/tasks/' + taskId, {
 				done: done,
 			})
 			.catch(() => {

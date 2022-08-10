@@ -10,7 +10,7 @@ const CategoryTasks = ({ items, onRemove, onClickItem, activeItem }) => {
 	// При нажатии на крестик, удаление выбранной категории
 	const removeCategory = item => {
 		if (window.confirm('Are you sure?')) {
-			axios.delete('http://localhost:3002/lists/' + item.id).then(() => {
+			axios.delete('http://localhost:3000/lists/' + item.id).then(() => {
 				onRemove(item.id);
 			});
 		}

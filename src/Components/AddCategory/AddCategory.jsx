@@ -21,7 +21,7 @@ function AddCategory({ addToList }) {
 		}
 
 		axios
-			.post('http://localhost:3002/lists', { name: inputValue })
+			.post('http://localhost:3000/lists', { name: inputValue })
 			.then(({ data }) => {
 				if (!inputValue) {
 					return data;
