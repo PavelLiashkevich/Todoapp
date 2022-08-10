@@ -86,13 +86,15 @@
       "listId": 3,
       "text": "Robert Martin - clean code",
       "completed": false,
-      "id": 14
+      "id": 14,
+      "done": false
     },
     {
       "listId": 4,
       "text": "Football",
       "completed": false,
-      "id": 15
+      "id": 15,
+      "done": false
     }
   ]
 }
