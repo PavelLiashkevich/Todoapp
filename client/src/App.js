@@ -21,11 +21,9 @@ function App() {
 
 	useEffect(() => {
 		// Получение данных из фейковой БД, а именно категории заданий и сами задания, относящиеся к каждой категории
-		axios
-			.get(`${process.env.REACT_APP_SERVER_API}/lists?_embed=tasks`)
-			.then(({ data }) => {
-				setLists(data);
-			});
+		axios.get('/lists?_embed=tasks').then(({ data }) => {
+			setLists(data);
+		});
 	}, []);
 
 	// Добавление новой категории из input
@@ -57,11 +55,9 @@ function App() {
 			setLists(newList);
 
 			// Удаление задания из БД
-			axios
-				.delete(`${process.env.REACT_APP_SERVER_API}/tasks/` + taskId)
-				.catch(() => {
-					alert('Error');
-				});
+			axios.delete('/tasks/' + taskId).catch(() => {
+				alert('Error');
+			});
 		}
 	};
 
@@ -100,7 +96,7 @@ function App() {
 
 		// Обновление в БД
 		axios
-			.patch(`${process.env.REACT_APP_SERVER_API}/tasks/` + taskObj.id, {
+			.patch('/tasks/' + taskObj.id, {
 				text: newTaskText,
 			})
 			.catch(() => {
@@ -125,7 +121,7 @@ function App() {
 
 		// Обновление в БД
 		axios
-			.patch(`${process.env.REACT_APP_SERVER_API}/tasks/` + taskId, {
+			.patch('/tasks/' + taskId, {
 				done: done,
 			})
 			.catch(() => {

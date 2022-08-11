@@ -26,16 +26,14 @@ function AddTask({ list, onAddTask }) {
 		};
 
 		// Отправка запроса в задания, если успешно, получаем данные, а далее срабатывает метод "onAddTask" и наш список с заданиями обновляется
-		axios
-			.post(`${process.env.REACT_APP_SERVER_API}/tasks`, obj)
-			.then(({ data }) => {
-				if (!inputValue) {
-					alert("You haven't entered the task text");
-					return;
-				}
-				onAddTask(list.id, data);
-				switchForm();
-			});
+		axios.post('/tasks', obj).then(({ data }) => {
+			if (!inputValue) {
+				alert("You haven't entered the task text");
+				return;
+			}
+			onAddTask(list.id, data);
+			switchForm();
+		});
 	};
 
 	return (

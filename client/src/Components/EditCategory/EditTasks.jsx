@@ -23,7 +23,7 @@ function EditTasks({
 		if (newTitle) {
 			onEditTitle(list.id, newTitle);
 			axios
-				.patch(`${process.env.REACT_APP_SERVER_API}/lists` + list.id, {
+				.patch('/lists' + list.id, {
 					name: newTitle,
 				})
 				.catch(() => {

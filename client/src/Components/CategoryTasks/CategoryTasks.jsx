@@ -10,11 +10,9 @@ const CategoryTasks = ({ items, onRemove, onClickItem, activeItem }) => {
 	// При нажатии на крестик, удаление выбранной категории
 	const removeCategory = item => {
 		if (window.confirm('Are you sure?')) {
-			axios
-				.delete(`${process.env.REACT_APP_SERVER_API}/lists` + item.id)
-				.then(() => {
-					onRemove(item.id);
-				});
+			axios.delete('/lists' + item.id).then(() => {
+				onRemove(item.id);
+			});
 		}
 	};
 

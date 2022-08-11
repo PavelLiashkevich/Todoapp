@@ -20,16 +20,14 @@ function AddCategory({ addToList }) {
 			return;
 		}
 
-		axios
-			.post(`${process.env.REACT_APP_SERVER_API}/lists`, { name: inputValue })
-			.then(({ data }) => {
-				if (!inputValue) {
-					return data;
-				}
-				const objList = { ...data, tasks: [] };
-				addToList(objList);
-				onClose();
-			});
+		axios.post('/lists', { name: inputValue }).then(({ data }) => {
+			if (!inputValue) {
+				return data;
+			}
+			const objList = { ...data, tasks: [] };
+			addToList(objList);
+			onClose();
+		});
 	};
 
 	// После нажатия на крестик очищается input и скрывается popup
