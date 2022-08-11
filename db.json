@@ -1,103 +1,99 @@
 {
-  "lists": [
-    {
-      "id": 1,
-      "name": "Frontend"
-    },
-    {
-      "id": 2,
-      "name": "Backend"
-    },
-    {
-      "id": 3,
-      "name": "Books"
-    },
-    {
-      "id": 4,
-      "name": "Sport"
-    },
-    {
-      "id": 5,
-      "name": "Other"
-    },
-    {
-      "name": "111",
-      "id": 6
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "listId": 2,
-      "text": "Learn Node.js",
-      "done": true
-    },
-    {
-      "id": 5,
-      "listId": 3,
-      "text": "Steve Jobs",
-      "done": true
-    },
-    {
-      "id": 6,
-      "listId": 1,
-      "text": "Learn JS",
-      "done": true
-    },
-    {
-      "id": 7,
-      "listId": 1,
-      "text": "Closure",
-      "done": true
-    },
-    {
-      "id": 8,
-      "listId": 4,
-      "text": "Running 5km",
-      "done": true
-    },
-    {
-      "listId": 1,
-      "text": "Function",
-      "completed": false,
-      "id": 9
-    },
-    {
-      "listId": 1,
-      "text": "DOM",
-      "completed": false,
-      "id": 10
-    },
-    {
-      "listId": 1,
-      "text": "ReactJS Hooks (useState, useEffect)",
-      "completed": false,
-      "id": 11
-    },
-    {
-      "listId": 2,
-      "text": "SQL",
-      "completed": false,
-      "id": 12
-    },
-    {
-      "listId": 2,
-      "text": "MongoDB",
-      "completed": false,
-      "id": 13
-    },
-    {
-      "listId": 4,
-      "text": "Football",
-      "completed": false,
-      "id": 15,
-      "done": false
-    },
-    {
-      "listId": 3,
-      "text": "Robert Martin - clean code",
-      "completed": false,
-      "id": 16
-    }
-  ]
+	"lists": [
+		{
+			"id": 1,
+			"name": "Frontend"
+		},
+		{
+			"id": 2,
+			"name": "Backend"
+		},
+		{
+			"id": 3,
+			"name": "Books"
+		},
+		{
+			"id": 4,
+			"name": "Sport"
+		},
+		{
+			"id": 5,
+			"name": "Other"
+		}
+	],
+	"tasks": [
+		{
+			"id": 1,
+			"listId": 2,
+			"text": "Learn Node.js",
+			"done": true
+		},
+		{
+			"id": 5,
+			"listId": 3,
+			"text": "Steve Jobs",
+			"done": true
+		},
+		{
+			"id": 6,
+			"listId": 1,
+			"text": "Learn JS",
+			"done": true
+		},
+		{
+			"id": 7,
+			"listId": 1,
+			"text": "Closure",
+			"done": true
+		},
+		{
+			"id": 8,
+			"listId": 4,
+			"text": "Running 5km",
+			"done": true
+		},
+		{
+			"listId": 1,
+			"text": "Function",
+			"completed": false,
+			"id": 9
+		},
+		{
+			"listId": 1,
+			"text": "DOM",
+			"completed": false,
+			"id": 10
+		},
+		{
+			"listId": 1,
+			"text": "ReactJS Hooks (useState, useEffect)",
+			"completed": false,
+			"id": 11
+		},
+		{
+			"listId": 2,
+			"text": "SQL",
+			"completed": false,
+			"id": 12
+		},
+		{
+			"listId": 2,
+			"text": "MongoDB",
+			"completed": false,
+			"id": 13
+		},
+		{
+			"listId": 4,
+			"text": "Football",
+			"completed": false,
+			"id": 15,
+			"done": false
+		},
+		{
+			"listId": 3,
+			"text": "Robert Martin - clean code",
+			"completed": false,
+			"id": 16
+		}
+	]
 }
