@@ -23,13 +23,14 @@ function EditTasks({
 		if (newTitle) {
 			onEditTitle(list.id, newTitle);
 			axios
-				.patch('/lists' + list.id, {
+				.patch('/lists/' + list.id, {
 					name: newTitle,
 				})
 				.catch(() => {
 					alert('Error');
 				});
 		}
+		console.log(newTitle);
 	};
 
 	return (
