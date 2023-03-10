@@ -5,7 +5,7 @@
 ### About 🔧
 
 My Todo app.
-The repository includes a project using HTML, SCSS, JavaScript, React.
+The repository includes a project using HTML, SCSS, JavaScript, React (Deploy on Heroku).
 
 ## Check it out 💻
 
