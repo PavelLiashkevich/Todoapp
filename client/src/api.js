@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseURL =
 	// process.env.REACT_APP_SERVER_API
-	'https://todoapp-infotecs.herokuapp.com';
+	'https://todoapp-server-n5dm.onrender.com/';
 
 const api = axios.create({ baseURL });
 
