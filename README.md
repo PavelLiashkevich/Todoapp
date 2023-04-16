@@ -5,11 +5,11 @@
 ### About 🔧
 
 My Todo app.
-The repository includes a project using HTML, SCSS, JavaScript, React (Deploy on Heroku).
+The repository includes a project using HTML, SCSS, JavaScript, React (Deploy on Render).
 
 ## Check it out 💻
 
-[Todo App by Pavel Liashkevich](https://todoapp-infotecs.herokuapp.com/)
+[Todo App by Pavel Liashkevich](https://todoapp-server-n5dm.onrender.com/)
 
 <div align="center">
 <sub>Todo App. Coded by 
